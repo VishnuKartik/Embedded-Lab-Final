@@ -1,7 +1,7 @@
 #include <stdint.h>
 #include "tm4c123gh6pm.h"
 
-// ----------------- WS2812 TIMING (Your Format) -----------------
+// WS2812 TIMING
 void send_data_one(void){
     GPIO_PORTB_DATA_R = 0x40; 
     int j = 12;
@@ -20,7 +20,7 @@ void send_data_zero(void){
     while(j--);
 }
 
-// ----------------- SEND ONE BYTE -----------------
+//SEND ONE BYTE
 void send_byte(uint8_t b){
     int i;
     for(i=7; i>=0; i--){
@@ -29,20 +29,20 @@ void send_byte(uint8_t b){
     }
 }
 
-// ----------------- SEND A PIXEL ------------------
+// SEND A PIXEL
 void send_pixel(uint8_t r, uint8_t g, uint8_t b){
     send_byte(g);
     send_byte(r);
     send_byte(b);
 }
 
-// ----------------- WS2812 RESET ------------------
+// WS2812 RESET
 void ws_reset(void){
     int j = 6000;
     while(j--);
 }
 
-// ----------------- DELAY -------------------------
+// DELAY
 void delay_ms(int ms){
     volatile int i,k;
     for(i=0;i<ms;i++){
@@ -50,7 +50,7 @@ void delay_ms(int ms){
     }
 }
 
-// ----------------- COLOR LIST --------------------
+// COLOR LIST
 uint8_t colors[7][3] = {
     {255,0,0},  
     {0,255,0}, 
@@ -61,7 +61,7 @@ uint8_t colors[7][3] = {
     {255,255,255} 
 };
 
-// --------------------------- MAIN ----------------------------
+// MAIN
 int main(void){
 
     // Enable PB6 clock
