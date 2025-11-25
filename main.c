@@ -105,4 +105,4 @@ int main(void){
         }
     }
 }
-//exit ok
+//exit ok pavans code is ok 
