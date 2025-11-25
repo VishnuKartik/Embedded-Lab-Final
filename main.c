@@ -3,11 +3,11 @@
 
 // ----------------- WS2812 TIMING (Your Format) -----------------
 void send_data_one(void){
-    GPIO_PORTB_DATA_R = 0x40;   // PB6 HIGH
+    GPIO_PORTB_DATA_R = 0x40; 
     int j = 12;
     while(j--);
 
-    GPIO_PORTB_DATA_R = 0x00;   // PB6 LOW
+    GPIO_PORTB_DATA_R = 0x00;
     j = 5;
     while(j--);
 }
@@ -76,8 +76,8 @@ int main(void){
     GPIO_PORTB_PCTL_R &= ~(0xF << 24);
 
     int i;
-    int pos = 0;      // LED position rotating
-    int color_id = 0; // which color is active
+    int pos = 0; 
+    int color_id = 0;
 
     while(1){
 
@@ -91,7 +91,7 @@ int main(void){
         }
 
         ws_reset();
-        delay_ms(5);         // speed of rotation
+        delay_ms(5);   
 
         // Rotate LED
         pos++;
