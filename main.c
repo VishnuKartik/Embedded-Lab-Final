@@ -105,4 +105,8 @@ int main(void){
         }
     }
 }
+<<<<<<< HEAD
 //understood
+=======
+//the end
+>>>>>>> 306336a4df41aee958c2131f017d477bc212756e
