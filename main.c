@@ -105,4 +105,4 @@ int main(void){
         }
     }
 }
-//exit
+//exit ok
