@@ -105,4 +105,4 @@ int main(void){
         }
     }
 }
-//the end
+//good
